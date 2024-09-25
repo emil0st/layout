@@ -4,6 +4,21 @@
         <title>
             layout3
         </title>
+        <script>
+            function closemenu() {
+                document.querySelector("nav").style.left = "-270px";
+                document.querySelector("main").style.marginLeft = "30px";
+                document.querySelector("#closebtn").style.display = "none";
+                document.querySelector("#openbtn").style.display = "inline";
+            }
+
+            function openmenu() {
+                document.querySelector("nav").style.left = "0px";
+                document.querySelector("main").style.marginLeft = "300px";
+                document.querySelector("#closebtn").style.display = "inline";
+                document.querySelector("#openbtn").style.display = "none";
+            }
+        </script>
         <style>
             nav {
                 position:fixed;
@@ -15,6 +30,19 @@
                 flex-direction: column;
                 align-items: center;
                 padding-top: 30px;
+                transition: left 0.5s;
+            }
+
+            #closebtn, #openbtn {
+                width: 20px;
+                position:absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+            }
+
+            #openbtn {
+                display: none;
             }
 
             nav > a {
@@ -27,6 +55,7 @@
                 margin-left: 300px;
                 display:flex;
                 flex-wrap:wrap;
+                transition: margin-left 0.5s;
             }
 
             div.card {
@@ -46,13 +75,49 @@
             div.card > h1 {
                 font-size:17pt;
             }
+
+            button.knapp1{
+                background-color: #FF7400; /* orange */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+            }
+
+            button.knapp2{
+                background-color: #FF7400; /* orange */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+            }
+
+            button.knapp3{
+                background-color: #FF7400; /* orange */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                font-size: 16px;
+            }
         </style>
     </head>
     <body>
         <nav>
-            <a href="">knapp 1</a>
-            <a href="">knapp 2</a>
-            <a href="">knapp 3</a>
+            <img id="closebtn" onclick= "closemenu()"src="hamburgermenu.png">
+            <img id="openbtn" onclick= "openmenu()"src="hamburgermenu.png">
+            <button class="knapp1">Knapp 1</button>
+            <button class="knapp2">Knapp 2</button>
+            <button class="knapp3">Knapp 3</button>
+            
         </nav>
         <main>
             <div class="card">
