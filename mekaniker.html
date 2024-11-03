@@ -20,12 +20,16 @@
             }
         </script>
         <style>
+            body {
+                margin: 0px;
+            }
+            
             nav {
                 position:fixed;
                 left: 0px;
                 height: 100%;
                 width:300px;
-                background-color: #000000;
+                background-color: #41571A;
                 display:flex;
                 flex-direction: column;
                 align-items: center;
@@ -46,7 +50,7 @@
             }
 
             nav > a {
-                color: #FFFFFF;
+                color: #9AB173;
                 text-decoration: none;
                 font-size:14pt;
             }
@@ -59,11 +63,11 @@
             }
 
             div.card {
-                width:200px;
-                height:250px;
+                width:100%;
+                height: 100%;;
                 overflow: hidden;
-                background-color: #FFFFFFFF;
-                border: 1px solid #cdcdcd;
+                background-color: transparent;
+                border: 1px solid #F9AB173;
                 margin:10px;
                 cursor: pointer;
             }
@@ -76,8 +80,12 @@
                 font-size:17pt;
             }
 
+            div.card > h2 {
+                font-size:14pt;
+            }
+
             button.knapp1{
-                background-color: darkolivegreen; /* orange */
+                background-color: #556b2f; /* orange */
                 border: none;
                 color: white;
                 padding: 15px 32px;
@@ -88,7 +96,7 @@
             }
 
             button.knapp2{
-                background-color: #FF7400; /* orange */
+                background-color: #556b2f; /* orange */
                 border: none;
                 color: white;
                 padding: 15px 32px;
@@ -99,7 +107,7 @@
             }
 
             button.knapp3{
-                background-color: #FF7400; /* orange */
+                background-color: #556b2f; /* orange */
                 border: none;
                 color: white;
                 padding: 15px 32px;
@@ -110,7 +118,7 @@
             }
         </style>
     </head>
-    <body>
+        <body style="background-color:#556B2F;">
         <nav>
             <img id="closebtn" onclick= "closemenu()"src="hamburgermenu.png">
             <img id="openbtn" onclick= "openmenu()"src="hamburgermenu.png">
@@ -121,24 +129,13 @@
         </nav>
         <main>
             <div class="card">
-                <h1>Produktnamn</h1>
-                <img src="https://www.ockelboguiden.se/bilder/modeller/874500.jpg">
-            </div>
-            <div class="card">
-                <h1>Produktnamn</h1>
-                <img src="https://www.ockelboguiden.se/bilder/modeller/874500.jpg">
-            </div>
-            <div class="card">
-                <h1>Produktnamn</h1>
-                <img src="https://www.ockelboguiden.se/bilder/modeller/874500.jpg">
-            </div>
-            <div class="card">
                 <h1>Felsökning</h1>
                 <img src="https://skriva-cv.com/wp-content/uploads/2022/02/cv-mekaniker-1.jpg">
             </div>
             <div class="card">
                 <h1>Service & Undehåll</h1>
                 <img src="https://www.ikett.com/wp-content/uploads/2022/01/Ikett-bilmekaniker-vanliga-arbetsomraden-1000x667.jpg">
+                <h2>Kom in på service</h2>
             </div>
         
         </main>
